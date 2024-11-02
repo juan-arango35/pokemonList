@@ -1,8 +1,12 @@
 
 
-const Button = () => {
+const Button = ({ onClick, children, className, disabled }) => {
   return (
-    <div className="w-48 flex justify-center items-center mt-2 rounded-xl text-slate-950  h-8 shadow-md hover:bg-blue-600 hover:shadow-lg transition duration-300 ease-in-out" > Button</div>
+    <button 
+    onClick={onClick}
+    className={`px-4 py-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition ${className}`}
+    disabled={disabled}
+    > {children}</button>
   )
 }
 

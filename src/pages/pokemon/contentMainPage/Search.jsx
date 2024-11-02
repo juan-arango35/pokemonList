@@ -2,7 +2,7 @@
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div className="h-80 bg-red-500 rounded-xl col-span-2 row-span-4 row-start-2">Search</div>
   )
 }
 

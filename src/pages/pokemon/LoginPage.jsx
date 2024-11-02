@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import image from "../../assets/image 7.svg"
+import Button from "../../components/button/Button";
 
 
 const LoginPage = ({ submit }) => {
@@ -39,8 +40,8 @@ const LoginPage = ({ submit }) => {
         onChange={handleChange} 
         placeholder="Unsername"
         id={Math.random()}
-        name="username"/>
-        <button onClick={handleClick}> Ingresar</button>
+        name="username"/> <br/>
+        <Button  onClick={handleClick}> Ingresar</Button>
       </form>
     </div>
   </div>;

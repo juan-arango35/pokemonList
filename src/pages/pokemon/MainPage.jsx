@@ -5,7 +5,7 @@ import Search from "./contentMainPage/Search"
 const MainPage = ({redireccionaLogin}) => {
 
   return (
-    <div>
+    <div className="grid grid-cols-6 grid-rows-5 gap-4">
         <Search/>
         <Favorites redireccionaLogin={redireccionaLogin} />
     </div>
