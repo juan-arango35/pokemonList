@@ -1,8 +1,14 @@
+import Favorites from "./contentMainPage/Favorites"
+import Search from "./contentMainPage/Search"
 
 
-const MainPage = () => {
+const MainPage = ({redireccionaLogin}) => {
+
   return (
-    <div>MainPage</div>
+    <div>
+        <Search/>
+        <Favorites redireccionaLogin={redireccionaLogin} />
+    </div>
   )
 }
 

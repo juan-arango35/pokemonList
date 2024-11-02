@@ -23,7 +23,7 @@ const LoginInit = () => {
   return (
     <div className="bg-white-500 h-screen text-blue-300">
       {/* si el estado es LOGIN mostrara login page */}
-      {paginaActual === LOGIN && <LoginPage sumbit={handleSumbit} />}
+      {paginaActual === LOGIN && <LoginPage submit={handleSumbit} />}
       {/*       Si el estado es session mostara mainPAge */}
       {paginaActual === SESSION && (
         <MainPage redireccionaLogin={redireccionaLogin} />
