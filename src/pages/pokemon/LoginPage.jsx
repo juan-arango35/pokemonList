@@ -1,9 +1,48 @@
+import { useEffect, useState } from "react";
+import image from "../../assets/image 7.svg"
+import Button from "../../components/button/Button";
 
+const LoginPage = ({ submit }) => {
+  //creamos el username de ingreso
+  const [username, setUsername] = useState("");
 
-const LoginPage = () => {
-  return (
-    <div>LoginPage</div>
-  )
-}
+  // maneja el cambio dle input
+  const handleChange = (event) => {
+    event.preventDefault();
+    console.log("input :", event.target.value);
+    setUsername(event.target.value);
+  };
 
-export default LoginPage
+  //mandamos el username a localstorage
+  useEffect(() => {
+    if (username) {
+      localStorage.setItem("username", username);
+    }
+  }, [username]);
+
+  //manejamos el click para el boton de submit
+  const handleClick=(event)=>{
+    event.preventDefault();
+    if(username && username !== ""){
+      submit(true);
+    } else {
+      submit(false)
+    }
+  }
+  return <div>
+    <div>
+      <img src={image} alt="logo-incio" />
+      <form>
+        <input
+        type="text"
+        onChange={handleChange} 
+        placeholder="Unsername"
+        id={Math.random()}
+        name="username"/>
+        <Button onClick={handleClick}> Ingresar</Button>
+      </form>
+    </div>
+  </div>;
+};
+
+export default LoginPage;

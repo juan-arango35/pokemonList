@@ -1,4 +1,6 @@
 import { useState } from "react";
+import LoginPage from "./LoginPage";
+import MainPage from "./MainPage";
 
 //colocamos las constantes de sesionç
 const LOGIN = "login";
@@ -19,7 +21,7 @@ const LoginInit = () => {
   }
 
   return (
-    <div className="bg-slate-500 h-screen text-blue-300">
+    <div className="bg-white-500 h-screen text-blue-300">
       {/* si el estado es LOGIN mostrara login page */}
       {paginaActual === LOGIN && <LoginPage sumbit={handleSumbit} />}
       {/*       Si el estado es session mostara mainPAge */}
